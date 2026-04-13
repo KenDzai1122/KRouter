@@ -1,5 +1,3 @@
----
-
 ## Hướng Dẫn Tiếng Việt
 
 ### Bước 1: Cấu hình `config.toml`
@@ -118,8 +116,6 @@ model = "cx/gpt-5.4-xhigh"
 # cx/gpt-5-codex-mini
 ```
 
----
-
 ## English Guide
 
 ### Step 1: Configure `config.toml`
@@ -237,5 +233,3 @@ model = "cx/gpt-5.4-xhigh"
 # cx/gpt-5-codex
 # cx/gpt-5-codex-mini
 ```
-
----
