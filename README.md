@@ -40,7 +40,7 @@ This repository now separates the documentation into:
 <table>
   <tr>
     <td align="center" width="16%">
-      <img src="https://cdn.simpleicons.org/visualstudiocode/007ACC" alt="VS Code" width="56" /><br />
+      <img src="./assets/vscode.svg" alt="VS Code" width="56" /><br />
       <strong>VS Code</strong><br />
       <sub>Main editor setup</sub>
     </td>
@@ -87,17 +87,17 @@ This repository now separates the documentation into:
       <sub>Model provider</sub>
     </td>
     <td align="center" width="16%">
-      <img src="https://cdn.simpleicons.org/json/000000" alt="config.toml" width="56" /><br />
+      <img src="./assets/config.svg" alt="config.toml" width="56" /><br />
       <strong>config.toml</strong><br />
       <sub>Core config</sub>
     </td>
     <td align="center" width="16%">
-      <img src="https://cdn.simpleicons.org/openai/412991" alt="OpenAI Key" width="56" /><br />
+      <img src="./assets/auth.svg" alt="auth.json" width="56" /><br />
       <strong>auth.json</strong><br />
       <sub>API key auth</sub>
     </td>
     <td align="center" width="16%">
-      <img src="https://cdn.simpleicons.org/markdown/000000" alt="Docs" width="56" /><br />
+      <img src="./assets/docs.svg" alt="Docs" width="56" /><br />
       <strong>Docs</strong><br />
       <sub>VN + EN guides</sub>
     </td>

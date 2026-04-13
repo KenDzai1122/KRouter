@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="auth.json">
+  <rect width="64" height="64" rx="14" fill="#111827"/>
+  <path d="M21 29a11 11 0 1 1 20 6h7a6 6 0 0 1 0 12h-4l-5 5h-7l3-5h-8a9 9 0 0 1-6-18Z" fill="#10b981"/>
+  <circle cx="29" cy="29" r="4" fill="#ecfeff"/>
+  <path d="M33 29h13M42 29v4" stroke="#ecfeff" stroke-width="3" stroke-linecap="round"/>
+</svg>
