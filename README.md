@@ -37,12 +37,72 @@ This repository now separates the documentation into:
 
 ## Supported Tools
 
-<div align="center">
-  <img src="./assets/codex.png" alt="Codex" width="72" />
-  <img src="./assets/claude.png" alt="Claude" width="72" />
-  <img src="./assets/cursor.png" alt="Cursor" width="72" />
-  <img src="./assets/gemini-cli.png" alt="Gemini CLI" width="72" />
-</div>
+<table>
+  <tr>
+    <td align="center" width="16%">
+      <img src="https://cdn.simpleicons.org/visualstudiocode/007ACC" alt="VS Code" width="56" /><br />
+      <strong>VS Code</strong><br />
+      <sub>Main editor setup</sub>
+    </td>
+    <td align="center" width="16%">
+      <img src="./assets/codex.png" alt="Codex App" width="56" /><br />
+      <strong>Codex App</strong><br />
+      <sub>Desktop workflow</sub>
+    </td>
+    <td align="center" width="16%">
+      <img src="./assets/codex.png" alt="Codex CLI" width="56" /><br />
+      <strong>Codex CLI</strong><br />
+      <sub>Terminal usage</sub>
+    </td>
+    <td align="center" width="16%">
+      <img src="./assets/cursor.png" alt="Cursor" width="56" /><br />
+      <strong>Cursor</strong><br />
+      <sub>AI IDE workflow</sub>
+    </td>
+    <td align="center" width="16%">
+      <img src="./assets/opencode.png" alt="OpenCode" width="56" /><br />
+      <strong>OpenCode</strong><br />
+      <sub>Open coding agent</sub>
+    </td>
+    <td align="center" width="16%">
+      <img src="./assets/openclaw.png" alt="OpenClaw" width="56" /><br />
+      <strong>OpenClaw</strong><br />
+      <sub>Multi-agent client</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="16%">
+      <img src="./assets/claude.png" alt="Claude Code" width="56" /><br />
+      <strong>Claude Code</strong><br />
+      <sub>Anthropic tooling</sub>
+    </td>
+    <td align="center" width="16%">
+      <img src="./assets/gemini-cli.png" alt="Gemini CLI" width="56" /><br />
+      <strong>Gemini CLI</strong><br />
+      <sub>Google CLI flow</sub>
+    </td>
+    <td align="center" width="16%">
+      <img src="./assets/codex.png" alt="KenDev API" width="56" /><br />
+      <strong>KenDev-API</strong><br />
+      <sub>Model provider</sub>
+    </td>
+    <td align="center" width="16%">
+      <img src="https://cdn.simpleicons.org/json/000000" alt="config.toml" width="56" /><br />
+      <strong>config.toml</strong><br />
+      <sub>Core config</sub>
+    </td>
+    <td align="center" width="16%">
+      <img src="https://cdn.simpleicons.org/openai/412991" alt="OpenAI Key" width="56" /><br />
+      <strong>auth.json</strong><br />
+      <sub>API key auth</sub>
+    </td>
+    <td align="center" width="16%">
+      <img src="https://cdn.simpleicons.org/markdown/000000" alt="Docs" width="56" /><br />
+      <strong>Docs</strong><br />
+      <sub>VN + EN guides</sub>
+    </td>
+  </tr>
+</table>
 
 ## What The Guides Cover
 
@@ -63,4 +123,3 @@ This repository now separates the documentation into:
 
 - [README.vi.md](./README.vi.md)
 - [README.en.md](./README.en.md)
-
