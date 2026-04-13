@@ -1,235 +1,66 @@
-## Hướng Dẫn Tiếng Việt
+<div align="center">
+  <img src="./assets/banner.png" alt="KRouter banner" width="920" />
 
-### Bước 1: Cấu hình `config.toml`
+  # KRouter
 
-Trên Windows, truy cập vào:
-`C:\Users\<tên thư mục người dùng>\.codex`
+  **Bilingual setup guides for Codex on KenDev-API**
 
-Tìm file `config.toml`, mở file này để chỉnh sửa.
+  [![Guide](https://img.shields.io/badge/Guide-Vietnamese%20%2B%20English-0f172a?style=for-the-badge)](./README.vi.md)
+  [![Codex](https://img.shields.io/badge/Codex-KenDev--API-2563eb?style=for-the-badge)](./README.en.md)
+  [![Status](https://img.shields.io/badge/Docs-Ready-16a34a?style=for-the-badge)](./README.en.md)
+</div>
 
-Xóa toàn bộ nội dung cũ và dán cấu hình bên dưới, sau đó lưu lại:
+## Overview
 
-```toml
-model = "cx/gpt-5.4-xhigh"
-model_provider = "KenDev-API"
-sandbox_mode = "danger-full-access"
+KRouter provides a clean Codex setup guide for KenDev-API users.
+This repository now separates the documentation into:
 
-# Available KenDev-API models:
-# cx/gpt-5.4
-# cx/gpt-5.4-xhigh
-# cx/gpt-5.4-high
-# cx/gpt-5.3-codex
-# cx/gpt-5.3-codex-xhigh
-# cx/gpt-5.3-codex-high
-# cx/gpt-5.3-codex-low
-# cx/gpt-5.3-codex-none
-# cx/gpt-5.3-codex-spark
-# cx/gpt-5.2-codex
-# cx/gpt-5.2
-# cx/gpt-5.1-codex-mini
-# cx/gpt-5.1-codex-mini-high
-# cx/gpt-5.1-codex-max
-# cx/gpt-5.1-codex
-# cx/gpt-5.1
-# cx/gpt-5-codex
-# cx/gpt-5-codex-mini
+- [Vietnamese Guide](./README.vi.md)
+- [English Guide](./README.en.md)
 
-[model_providers.KenDev-API]
-name = "KenDev-API"
-base_url = "http://14.225.255.58:20128/v1"
-wire_api = "responses"
+## Quick Access
 
-[agents.subagent]
-model = "cx/gpt-5.3-codex-xhigh"
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <h3>Tiếng Việt</h3>
+      <p>Hướng dẫn cài đặt, cấu hình <code>config.toml</code>, <code>auth.json</code>, đổi model, và lưu ý tránh lỗi.</p>
+      <p><a href="./README.vi.md"><strong>Mở README.vi.md</strong></a></p>
+    </td>
+    <td align="center" width="50%">
+      <h3>English</h3>
+      <p>Complete setup instructions for <code>config.toml</code>, <code>auth.json</code>, model switching, and safety notes.</p>
+      <p><a href="./README.en.md"><strong>Open README.en.md</strong></a></p>
+    </td>
+  </tr>
+</table>
 
-[windows]
-sandbox = "unelevated"
-```
+## Supported Tools
 
-### Bước 2: Cấu hình `auth.json`
+<div align="center">
+  <img src="./assets/codex.png" alt="Codex" width="72" />
+  <img src="./assets/claude.png" alt="Claude" width="72" />
+  <img src="./assets/cursor.png" alt="Cursor" width="72" />
+  <img src="./assets/gemini-cli.png" alt="Gemini CLI" width="72" />
+</div>
 
-Truy cập:
-`C:\Users\<tên thư mục người dùng>\.codex`
+## What The Guides Cover
 
-Tìm file `auth.json`, xóa toàn bộ nội dung cũ và dán nội dung sau:
+- How to set `model`, `model_provider`, and `sandbox_mode` in `config.toml`
+- How to configure `auth.json` with your API key
+- How to switch Codex models safely using `Available KenDev-API models`
+- Why you should not change models directly in the chat bar
+- Notes about suffixes like `-xhigh`, `-high`, and `-medium`
 
-```json
-{
-  "auth_mode": "apikey",
-  "OPENAI_API_KEY": "<your key>"
-}
-```
+## Recommended Reading Order
 
-Lưu file lại.
+1. Open the guide in your preferred language.
+2. Copy the `config.toml` template.
+3. Fill in `auth.json`.
+4. Restart VS Code after saving the files.
 
-### Hướng dẫn thay đổi model và mode của Codex
+## Language Files
 
-Muốn thay đổi model, vào `Settings` rồi mở `Config` để mở file `config.toml`.
+- [README.vi.md](./README.vi.md)
+- [README.en.md](./README.en.md)
 
-Tại đây, copy một model trong danh sách `Available KenDev-API models` và thay vào dòng:
-
-```toml
-model = "..."
-```
-
-Các model có hậu tố `-xhigh`, `-high`, `-medium` là các model đã kèm sẵn mode tương ứng.
-
-Với các model này, không cần và không nên đổi mode trong thanh chat với agent.
-
-Lưu ý quan trọng: để tránh lỗi, tuyệt đối không thay hoặc chọn model ở thanh chat.
-
-### Ghi chú
-
-- Bạn có thể bị mất các cuộc trò chuyện cũ.
-- Mở `VS Code -> Extensions`, cài `Codex`, và bảo đảm bạn đang dùng phiên bản mới nhất trước khi cấu hình.
-- Sau khi cấu hình xong, hãy khởi động lại VS Code. Nếu giao diện hiển thị đúng như mong đợi thì cấu hình đã hoạt động.
-
-### Giới hạn
-
-- Hiện tại subagent chưa hoạt động, nên công cụ chỉ chạy độc lập.
-- Nếu muốn đổi model, hãy sửa dòng này trong `config.toml`:
-
-```toml
-model = "cx/gpt-5.4-xhigh"
-```
-
-### Các model hỗ trợ tốt
-
-```txt
-# cx/gpt-5.4
-# cx/gpt-5.4-xhigh
-# cx/gpt-5.4-high
-# cx/gpt-5.3-codex
-# cx/gpt-5.3-codex-xhigh
-# cx/gpt-5.3-codex-high
-# cx/gpt-5.3-codex-low
-# cx/gpt-5.3-codex-none
-# cx/gpt-5.3-codex-spark
-# cx/gpt-5.2-codex
-# cx/gpt-5.2
-# cx/gpt-5.1-codex-mini
-# cx/gpt-5.1-codex-mini-high
-# cx/gpt-5.1-codex-max
-# cx/gpt-5.1-codex
-# cx/gpt-5.1
-# cx/gpt-5-codex
-# cx/gpt-5-codex-mini
-```
-
-## English Guide
-
-### Step 1: Configure `config.toml`
-
-On Windows, go to:
-`C:\Users\<your user folder name>\.codex`
-
-Find the file `config.toml` and open it for editing.
-
-Delete all existing content and paste the config below, then save:
-
-```toml
-model = "cx/gpt-5.4-xhigh"
-model_provider = "KenDev-API"
-sandbox_mode = "danger-full-access"
-
-# Available KenDev-API models:
-# cx/gpt-5.4
-# cx/gpt-5.4-xhigh
-# cx/gpt-5.4-high
-# cx/gpt-5.3-codex
-# cx/gpt-5.3-codex-xhigh
-# cx/gpt-5.3-codex-high
-# cx/gpt-5.3-codex-low
-# cx/gpt-5.3-codex-none
-# cx/gpt-5.3-codex-spark
-# cx/gpt-5.2-codex
-# cx/gpt-5.2
-# cx/gpt-5.1-codex-mini
-# cx/gpt-5.1-codex-mini-high
-# cx/gpt-5.1-codex-max
-# cx/gpt-5.1-codex
-# cx/gpt-5.1
-# cx/gpt-5-codex
-# cx/gpt-5-codex-mini
-
-[model_providers.KenDev-API]
-name = "KenDev-API"
-base_url = "http://14.225.255.58:20128/v1"
-wire_api = "responses"
-
-[agents.subagent]
-model = "cx/gpt-5.3-codex-xhigh"
-
-[windows]
-sandbox = "unelevated"
-```
-
-### Step 2: Configure `auth.json`
-
-Go to:
-`C:\Users\<your user folder name>\.codex`
-
-Find the file `auth.json`, delete everything inside it, and paste:
-
-```json
-{
-  "auth_mode": "apikey",
-  "OPENAI_API_KEY": "<your key>"
-}
-```
-
-Save the file.
-
-### How to change the Codex model and mode
-
-To change the model, open `Settings`, then open `Config` to edit the `config.toml` file.
-
-Copy one of the models listed under `Available KenDev-API models` and replace this line:
-
-```toml
-model = "..."
-```
-
-Models with suffixes like `-xhigh`, `-high`, and `-medium` already include their intended mode.
-
-For those models, you should not change the mode in the chat bar with the agent.
-
-Important: to avoid errors, do not change or select models from the chat bar.
-
-### Notes
-
-- You may lose previous chat sessions.
-- Open `VS Code -> Extensions`, install `Codex`, and make sure you are using the latest version before configuring it.
-- After setup is complete, restart VS Code. If the interface looks correct, the configuration is working.
-
-### Limitations
-
-- Subagents are currently not working, so it runs independently only.
-- To change the model, edit this line in `config.toml`:
-
-```toml
-model = "cx/gpt-5.4-xhigh"
-```
-
-### Supported models
-
-```txt
-# cx/gpt-5.4
-# cx/gpt-5.4-xhigh
-# cx/gpt-5.4-high
-# cx/gpt-5.3-codex
-# cx/gpt-5.3-codex-xhigh
-# cx/gpt-5.3-codex-high
-# cx/gpt-5.3-codex-low
-# cx/gpt-5.3-codex-none
-# cx/gpt-5.3-codex-spark
-# cx/gpt-5.2-codex
-# cx/gpt-5.2
-# cx/gpt-5.1-codex-mini
-# cx/gpt-5.1-codex-mini-high
-# cx/gpt-5.1-codex-max
-# cx/gpt-5.1-codex
-# cx/gpt-5.1
-# cx/gpt-5-codex
-# cx/gpt-5-codex-mini
-```
